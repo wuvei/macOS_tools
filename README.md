@@ -23,4 +23,6 @@ Few useful tools for macOS
 Karabiner-Elements is a powerful utility for keyboard customization on macOS Sierra (10.12) or later. Since programmers prefer machanical keyboards and most of those keyboards are for windows, Karaviner-Elements becomes a great software solution.
 
 [official site](https://pqrs.org/osx/karabiner/)
+
 [github](https://github.com/tekezo/Karabiner-Elements)
+
