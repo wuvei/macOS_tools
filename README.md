@@ -26,3 +26,27 @@ Karabiner-Elements is a powerful utility for keyboard customization on macOS Sie
 
 [github](https://github.com/tekezo/Karabiner-Elements)
 
+## Remove Java JDK and Install via brew cask
+###Remove:
+Refer to the [Link](https://stackoverflow.com/questions/19039752/removing-java-8-jdk-from-mac)
+Run this command to just remove the JDK:
+```
+sudo rm -rf /Library/Java/JavaVirtualMachines/jdk<version>.jdk
+```
+Run these commands if you want to remove plugins:
+```
+sudo rm -rf /Library/PreferencePanes/JavaControlPanel.prefPane
+sudo rm -rf /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+sudo rm -rf /Library/LaunchAgents/com.oracle.java.Java-Updater.plist
+sudo rm -rf /Library/PrivilegedHelperTools/com.oracle.java.JavaUpdateHelper
+sudo rm -rf /Library/LaunchDaemons/com.oracle.java.Helper-Tool.plist
+sudo rm -rf /Library/Preferences/com.oracle.java.Helper-Tool.plist
+```
+### Install Java JDK via brew cask
+Refer to this [Link](https://stackoverflow.com/questions/24342886/how-to-install-java-8-on-mac)
+```
+brew tap caskroom/versions
+brew cask install java8
+```
+To get a list of all older versions of java: `brew tap caskroom/versions` and then use `brew search java`.
+
