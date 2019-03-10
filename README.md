@@ -50,3 +50,32 @@ brew cask install java8
 ```
 To get a list of all older versions of java: `brew tap caskroom/versions` and then use `brew search java`.
 
+
+
+## Latex
+
+If you do not want to install 3G MacTex, you could:
+### Install BasicTex
+Download BasicTex From [official site](http://www.tug.org/mactex/morepackages.html)
+Or
+```
+brew cask install basictex
+```
+### Install MacTex-without-gui
+If you install BasicTex, you would be bothered by having to install dependency packages when needed. Or you can
+```
+brew cask install mactex-no-gui
+```
+
+After that, you should add it to the `path`
+```
+export PATH=/usr/local/texlive/2017basic/bin/x86_64-darwin:$PATH
+```
+### Update and Install Packages
+```
+sudo tlmgr update --self --repository http://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet
+sudo tlmgr install latexmk --repository http://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet
+
+```
+
+[Reference](https://www.ouyangsong.com/posts/57080/)
